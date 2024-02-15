@@ -1,0 +1,259 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    background: #105164;
+    font-family: 'Poppins', sans-serif;
+}
+
+header {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+header img {
+    width: 10rem;
+    height: auto;
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.5);
+    }
+
+    100% {
+        box-shadow: 0 0 0 30px rgba(0, 0, 0, 0);
+    }
+
+}
+
+header h3 {
+    color: white;
+    margin: 1.5rem 0;
+    letter-spacing: 0.1rem;
+    font-size: 2.5rem;
+}
+
+header p {
+    color: white;
+}
+
+.arrow {
+
+    color: white;
+    margin: 5rem;
+    font-size: 5rem;
+    animation: arrow 2s ease-in-out infinite;
+}
+
+@keyframes arrow {
+    0% {
+        color: #187ccd;
+    }
+
+    50% {
+        color: #0a3d62;
+    }
+
+    100% {
+        color: #187ccd;
+    }
+
+}
+
+.container {
+    width: 100%;
+    min-height: 150vh;
+    display: grid;
+    grid-template-columns: 0.6fr 0.6fr 0.4fr 0.4fr;
+    grid-template-rows: 1fr 0.6fr 0.8fr 0.2fr;
+    gap: 1rem;
+    grid-template-areas: "profile profile Skills Skills"
+        "Edu Edu Project Project"
+        "lang lang Contact Contact"
+        "footer footer footer footer";
+    padding: 2rem;
+
+}
+.container .Profile a{
+  
+    margin-left: 15px;
+}
+.container .Profile h2{
+    margin-left: 15px;
+}
+
+.Profile {
+    background: white;
+    color: black;
+    padding: 2rem;
+    grid-area: profile;
+}
+
+
+.Skills {
+    background: #0b669b;
+    color: white;
+    padding: 2rem;
+    grid-area: Skills;
+}
+
+.Edu {
+    background: #3c6382;
+    color: white;
+    padding: 2rem;
+    grid-area: Edu;
+}
+
+.Project {
+    background: white;
+    color: #105164;
+    padding: 2rem;
+    grid-area: Project;
+
+}
+
+.lang {
+    background: #187ccd;
+    color: white;
+    padding: 2rem;
+    grid-area: lang;
+
+}
+
+.Contact {
+    background: #3c6382;
+    color: white;
+    padding: 2rem;
+    grid-area: Contact;
+}
+
+footer {
+    color: white;
+    background: #3c6382;
+    padding: 2rem;
+    grid-area: footer;
+}
+
+h2 {
+    margin-bottom: 1rem;
+}
+
+.Profile p {
+    padding: 0.2rem 1rem;
+    text-align: justify;
+    line-height: 2.2rem;
+
+
+}
+
+.Profile a {
+    text-decoration: none;
+    padding: 0.5rem 0.6rem;
+    background: rgb(98, 170, 212);
+    color: black;
+    font-weight: bold;
+}
+
+.Skills div {
+    width: 100%;
+    padding: 0.5rem 1rem;
+
+}
+
+.Skills div progress[value] {
+    width: 100%;
+    height: 1rem;
+}
+
+.Edu h2 {
+    letter-spacing: 0.1rem;
+
+}
+
+.Edu p {
+    padding: 0.3rem 1rem;
+    text-align: justify;
+    line-height: 2.2rem;
+}
+
+.Edu a {
+    text-decoration: none;
+    padding: 0.5rem 0.6rem;
+    background: white;
+    color: black;
+    font-weight: bold;
+
+}
+
+.lang ul {
+    margin: 1rem 0;
+    padding: 0.3rem 1rem;
+}
+
+.lang ul li {
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.Contact div i {
+    margin-right: 0.2rem;
+
+}
+
+.Contact p {
+    margin: 1rem 0;
+    cursor: pointer;
+}
+
+.Contact a {
+    color: white;
+}
+
+footer i {
+    background: white;
+    color: black;
+    padding: 0.5rem;
+    margin: 1rem 0.3rem;
+    border-radius: 50%;
+    transition: 0.5s;
+}
+
+footer i:hover {
+    background: midnightblue;
+    color: white;
+    cursor: pointer;
+
+}
+
+footer {
+    text-align: center;
+}
+
+@media only screen and(max-width: 770px) {
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.8fr 0.6fr 1fr 0.6fr 0.5fr 0.8fr 0.1fr;
+        grid-template-areas: "profile"
+            "Skills"
+            "Edu"
+            "Project"
+            "lang"
+            "Contact"
+            "Padding"
+
+        ;
+    }
+
+}
